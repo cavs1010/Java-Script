@@ -59,18 +59,30 @@ const dataBaseMessages = {
         "All limitations are self-imposed. – Oliver Wendell Holmes",
         "Tough times never last but tough people do. – Robert H. Schiuller",
         "Problems are not stop signs, they are guidelines. – Robert H. Schiuller",
-       " One day the people that don’t even believe in you will tell everyone how they met you. – Johnny Depp",
-        "If I’m gonna tell a real story, I’m gonna start with my name. – Kendrick Lamar"
-        If you tell the truth you don’t have to remember anything. – Mark Twain
-        Have enough courage to start and enough heart to finish. – Jessica N. S. Yourko
-        Hate comes from intimidation, love comes from appreciation. – Tyga
-        I could agree with you but then we’d both be wrong. – Harvey Specter
-        Oh, the things you can find, if you don’t stay behind. – Dr. Seuss
-        Determine your priorities and focus on them. – Eileen McDargh
-        Be so good they can’t ignore you. – Steve Martin
-        Dream as if you’ll live forever, live as if you’ll die today. – James Dean
-        Yesterday you said tomorrow. Just do it. – Nike
-        I don’t need it to be easy, I need it to be worth it. – Lil Wayne]
+        "One day the people that don’t even believe in you will tell everyone how they met you. – Johnny Depp",
+        "If I’m gonna tell a real story, I’m gonna start with my name. – Kendrick Lamar",
+        "If you tell the truth you don’t have to remember anything. – Mark Twain",
+        "Have enough courage to start and enough heart to finish. – Jessica N. S. Yourko",
+        "Hate comes from intimidation, love comes from appreciation. – Tyga",
+        "I could agree with you but then we’d both be wrong. – Harvey Specter",
+        "Oh, the things you can find, if you don’t stay behind. – Dr. Seuss",
+        "Determine your priorities and focus on them. – Eileen McDargh",
+        "Be so good they can’t ignore you. – Steve Martin",
+        "Dream as if you’ll live forever, live as if you’ll die today. – James Dean",
+        "Yesterday you said tomorrow. Just do it. – Nike",
+        "I don’t need it to be easy, I need it to be worth it. – Lil Wayne"]
+
 }
 
-console.log(dataBaseMessages.weatherList[5]);
+function getRandomsentence (arraySentence){
+    const n = Math.floor(Math.random() * arraySentence.length);
+    return arraySentence[n];   
+}
+
+let randomWeather = getRandomsentence(dataBaseMessages.weatherList);
+let randomChallenge = getRandomsentence(dataBaseMessages.challengesList);
+let randomQuote = getRandomsentence(dataBaseMessages.quoteList);
+
+console.log(`The weather for tomorrow will be ${randomWeather}.`);
+console.log(`Your challenge for tomorrow will be ${randomChallenge}.`);
+console.log(`For inspiration, the quote of the day is: ${randomQuote}.`);
